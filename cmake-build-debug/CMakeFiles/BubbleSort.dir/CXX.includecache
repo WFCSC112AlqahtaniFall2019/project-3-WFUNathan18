@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Nathan/CLionProjects/project-3-WFUNathan18/main.cpp
+iostream
+-
+vector
+-
+ctime
+-
+cassert
+-
+

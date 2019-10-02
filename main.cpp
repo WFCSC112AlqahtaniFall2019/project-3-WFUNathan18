@@ -85,7 +85,7 @@ int main() {
     double elapsed_mergeSort = double(end_mergeSort - start_mergeSort) / CLOCKS_PER_SEC;
     double elapsed_bubbleSort = double(end_bubbleSort - start_bubbleSort) / CLOCKS_PER_SEC;
 
-    cout << elapsed_mergeSort << " " << elapsed_bubbleSort << endl;
+    cout << endl<<elapsed_mergeSort << "**" << elapsed_bubbleSort << endl;
 
     return 0;
 }

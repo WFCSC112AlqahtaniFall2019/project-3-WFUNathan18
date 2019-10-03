@@ -12,14 +12,13 @@ void mergeSortedLists(vector<int>& a, vector<int>& tmp, int leftPos, int rightPo
 void swap (int *a, int *b);
 void bubbleSort(int *a, int n);
 
-/*int argc, char* argv[]*/
-int main() {
+int main(int argc, char* argv[]) {
     // get input: first is random seed, second is vector length
     int seed;
     int iter = 1; // The current iteration, which modifies the array/vector length
                   // (1st iteration will be 100 long, 2nd iteration will be 200 long
                   // 3rd will be 300, etc.)
-    int limit; // How many times the program will run
+    int limit; // How many times the program will run (maximum amount of iterations)
 
     // Variables/Pointers for unit test
     int testVal1 = 50;
@@ -43,12 +42,10 @@ int main() {
     testPtr2 = nullptr;
 
     cout << "Please type in a numerical seed to generate contents for vector and array" << endl;
-    //seed = atoi(argv[1]);
-    cin >> seed;
+    seed = atoi(argv[1]);
     cout << "How many times do you want the program to run? (Minimum 1 time)" << endl;
     cout << "The first iteration will have arrays and vectors of length 100, and each iteration will increase the length by an additional 100." << endl;
-    //length = atoi(argv[2]);
-    cin >> limit;
+    limit = atoi(argv[2]);
     srand(seed);
 
     while (iter <= limit) {
@@ -176,12 +173,12 @@ void swap(int *a, int *b) {
 void bubbleSort(int *a, int n) {
     /* your code here */
     int j = 1;
-    while (n > (j - 1)) {
+    while ((j - 1) < n) {
         for (int i = 1; i < (n - j + 1); i++) {
             if (*(a + i) < *(a + (i - 1))) { // If the currently selected element is lesser in value than the element before it...
                 swap(*(a + i), *(a + (i - 1))); // Swap the currently selected element with the one before it
             }
         }
-        j++;
+        j++; // Decease how far along the array the program will evaluate
     }
 }

@@ -1,3 +1,8 @@
+// Author: Nathan Maynard
+// Course: CSC 112 Section B (Fall 2019)
+// Project: Project 3 - BubbleSort
+// Due Date: 3:30pm, Oct. 3, 2019
+
 #include <iostream>
 #include <vector>
 #include <ctime>
